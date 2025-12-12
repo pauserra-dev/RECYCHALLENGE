@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RECYCHALLENGE - TDR Pau Serra</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Carreguem la font Roboto de Google Fonts per coherència amb el joc -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Icona de la pestanya (Favicon) -->
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body>
+
+    <main class="container">
+        
+        <!-- SECCIÓ 1: CAPÇALERA I LOGO -->
+        <header class="header animate-fade-in">
+            <div class="logo-container">
+                <img src="logo.png" alt="Logotip Recychallenge" class="logo">
+            </div>
+            <h2 class="subtitol-projecte">Gamificant el reciclatge amb Python a Deltebre</h2>
+            <p class="descripcio-tdr">Treball de Recerca 2024-2025</p>
+        </header>
+
+        <!-- SECCIÓ 2: BOTONS D'ACCIÓ -->
+        <section class="actions animate-slide-up">
+            
+            <!-- Botó per jugar (Obre a la mateixa pestanya per experiència immersiva) -->
+            <!-- IMPORTANT: Assegura't que el fitxer index.html del joc està dins de la carpeta 'joc' -->
+            <a href="joc/index.html" class="btn btn-jugar">
+                <span class="icon">🎮</span>
+                <span class="text">JUGAR ARA</span>
+            </a>
+
+            <!-- Botó per llegir (Obre en nova pestanya per no perdre la web) -->
+            <!-- IMPORTANT: He actualitzat la ruta a la carpeta 'tdr' i el nom del fitxer -->
+            <a href="tdr/TDR_RECYCHALLENGE_Pau_Serra_Bertomeu.pdf" target="_blank" class="btn btn-tdr">
+                <span class="icon">📄</span>
+                <span class="text">LLEGIR TDR</span>
+            </a>
+
+        </section>
+
+    </main>
+
+    <!-- SECCIÓ 3: PEU DE PÀGINA (LLICÈNCIA) -->
+    <footer class="footer">
+        <p>
+            <a href="https://pauserra-dev.github.io/RECYCHALLENGE/">Recychallenge</a> © 2025 by 
+            <a href="https://github.com/pauserra-dev">Pau Serra Bertomeu</a> is licensed under 
+            <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a>
+            <span class="cc-icons">
+                <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="CC">
+                <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="BY">
+                <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="NC">
+                <img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="ND">
+            </span>
+        </p>
+    </footer>
+
+</body>
+</html>

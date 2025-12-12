@@ -1,0 +1,207 @@
+/* --- CONFIGURACIÓ GENERAL --- */
+:root {
+    /* Paleta de colors inspirada en el joc i natura */
+    --primary-green: #2ecc71;       /* Verd Reciclatge */
+    --primary-dark: #27ae60;        /* Verd Fosc (Hover) */
+    --accent-blue: #3498db;         /* Blau Deltebre */
+    --bg-gradient-start: #e0f7fa;   /* Cel molt clar */
+    --bg-gradient-end: #ffffff;     /* Blanc */
+    --text-main: #2c3e50;           /* Gris fosc professional */
+    --text-secondary: #7f8c8d;      /* Gris suau */
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border_box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empeny el footer avall */
+    text-align: center;
+}
+
+/* --- CONTENIDOR PRINCIPAL --- */
+.container {
+    flex: 1; /* Ocupa tot l'espai disponible menys el footer */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* --- CAPÇALERA --- */
+.logo-container {
+    margin-bottom: 1.5rem;
+}
+
+.logo {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 50%; /* Assegura que sigui rodó */
+    box-shadow: 0 8px 20px rgba(46, 204, 113, 0.3); /* Ombra verda suau */
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05) rotate(3deg); /* Petit efecte al passar el ratolí */
+}
+
+.titol-projecte {
+    font-weight: 900;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.subtitol-projecte {
+    font-weight: 400;
+    font-size: 1.25rem;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+}
+
+.descripcio-tdr {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 3rem;
+    border-bottom: 2px solid var(--primary-green);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* --- BOTONS --- */
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem 2rem;
+    border-radius: 50px; /* Botons rodons moderns */
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: var(--shadow);
+    gap: 10px;
+}
+
+/* Botó Jugar (Principal) */
+.btn-jugar {
+    background-color: var(--primary-green);
+    color: white;
+    border: 2px solid var(--primary-green);
+}
+
+.btn-jugar:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(46, 204, 113, 0.4);
+}
+
+/* Botó TDR (Secundari) */
+.btn-tdr {
+    background-color: white;
+    color: var(--accent-blue);
+    border: 2px solid var(--accent-blue);
+}
+
+.btn-tdr:hover {
+    background-color: var(--accent-blue);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3);
+}
+
+.icon {
+    font-size: 1.5rem;
+}
+
+/* --- FOOTER --- */
+.footer {
+    padding: 1.5rem;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    border-top: 1px solid #eee;
+}
+
+.footer a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.footer a:hover {
+    color: var(--primary-green);
+    text-decoration: underline;
+}
+
+.cc-icons {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.cc-icons img {
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.footer:hover .cc-icons img {
+    opacity: 1;
+}
+
+/* --- ANIMACIONS SIMPLES --- */
+.animate-fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+.animate-slide-up {
+    animation: slideUp 1s ease-out 0.3s backwards; /* 0.3s de retard */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- RESPONSIVE (MÒBIL) --- */
+@media (max-width: 600px) {
+    .titol-projecte { font-size: 2rem; }
+    .subtitol-projecte { font-size: 1.1rem; }
+    .logo { width: 140px; height: 140px; }
+    .btn { padding: 1rem 1.5rem; font-size: 1.1rem; }
+}
